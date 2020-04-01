@@ -32,6 +32,16 @@ void touch(const char *d, ...){
   system(com);
 }
 
+int contaTriangulos(const char *t){
+  int ti = 0;
+
+  for(int i = 0; i < length(t); i++){
+    if(strcmp("-", t[i])) ti++;
+  }
+
+  return ti;
+}
+
 
 %}
 %option noyywrap
@@ -40,13 +50,13 @@ void touch(const char *d, ...){
 
 %%
 
-<*>^\=\=\=                               {BEGIN INITIAL; }
+<*>^\=\=\=                                 {BEGIN INITIAL; }
 
-\ meta                                   {BEGIN META; }
+\ meta                                     {BEGIN META; }
 
-<META>^email:[ ].*                        {email = strdup(yytext + 7); }
+<META>^email:[ ].*                          {email = strdup(yytext + 7); }
 
-<META>^author:[ ].*                       {author = strdup(yytext + 8); }
+<META>^author:[ ].*                         {author = strdup(yytext + 8); }
 
 \ tree                                     {BEGIN TREE; }
 
@@ -54,7 +64,7 @@ void touch(const char *d, ...){
 
 <TREE>^-[^-]\{%name%\}\..*                 {char* r = concat(nome, yytext + 10); touch(r); mv(r, nome); }
 
-<TREE>^-[^-][i?\w|\d]*\/                   {mkdir(yytext + 2); mv(yytext + 2, nome);}
+<TREE>^-[^-][a-zA-Z0-9]*\/                 {mkdir(yytext + 2); mv(yytext + 2, nome);}
 
 <TREE>^-[^-]Makefile                       {touch(yytext + 2); mv(yytext + 2, nome);}
 
