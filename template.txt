@@ -8,9 +8,16 @@ author: J.João
 {%name%}/
 - {%name%}.fl
 - doc/
+-- coragem/
+--- coragem.pl
+--- ola/
+---- klezio/
+----- Makefile
+--- tuMM.hs
+-- nunissimo/
+--- Makefile
 -- {%name%}.md
 - exemplo/
-- Makefile
 
 
 === Makefile
