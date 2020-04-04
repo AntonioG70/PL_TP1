@@ -29,6 +29,19 @@ author: J.João
 install: {%name%}
         cp {%name%} /usr/local/bin/
 
+=== tuMM.hs
+
+        {%name%}: {%name%}.fl
+                flex {%name%}.fl
+                cc -o {%name%} lex.yy.
+
+        install: {%name%}
+                cp {%name%} /usr/local/bin/
+
+=== coragem.pl
+
+coragem ANDA LA
+
 === {%name%}.md
 # NAME
 {%name%} - o nosso fabuloso filtro  ...FIXME
