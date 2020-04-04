@@ -75,9 +75,10 @@ void updateDirectoryCoragem(char *d, char* name){
 }
 
 void writeToFile(const char* f){
-  FILE * file = fopen(currentFile, "a");
-  fwrite(f, sizeof(char), sizeof(f), file);
-  printf("%s", f);
+  FILE * file = fopen(currentFile, "a+");
+  printf("Printing to file: %s\n", f);
+  fputs(f, file);
+  fclose(file);
 }
 
 gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
@@ -110,11 +111,11 @@ gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
 <TREE>^\{%name%\}\/                           {strcat(currentDirectory, nome);
                                                strcat(currentDirectory,"/");
                                                mkdir(currentDirectory);
-                                             }
+                                              }
 
 <TREE>^[-]*[ ][A-Za-z0-9]*\/                  {updateDirectory(yytext);
                                                mkdir(currentDirectory);
-                                             }
+                                              }
 
 <TREE>^-[-]*[ ]\{%name%\}\..*                 {int trac = contaTracos(yytext);
                                                name = malloc(sizeof(char) * 30);
@@ -128,7 +129,7 @@ gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
                                                printf("%s\n%s", yytext+currentTracos+1, fileDirectory);
                                                g_hash_table_insert(files, (gpointer) yytext + currentTracos + 1, (gpointer) fileDirectory);
                                                printf("%d", g_hash_table_size(files));
-                                             }
+                                              }
 
 <TREE>^-[-]*[ ][A-Za-z0-9\.]*$                {updateDirectory(yytext);
                                                 touch(yytext + currentTracos + 1);
@@ -142,17 +143,15 @@ gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
 \=[ ].*                                       {BEGIN WRITE;
                                                char* fileName = strdup(yytext + 2);
                                                currentFile = g_hash_table_lookup(files, fileName);
-
                                               }
 
-<WRITE>.                                      {writeToFile(yytext);}
+<WRITE>.|\n                                   {writeToFile(yytext);}
 
 <WRITE>\{%name%\}                             {writeToFile(nome);}
 
+<WRITE>\{%author%\}                           {writeToFile(author);}
 
-
-
-
+<WRITE>\{%email%\}                            {writeToFile(email);}
 
 
 

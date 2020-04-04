@@ -417,15 +417,15 @@ static const YY_CHAR yy_meta[24] =
 
 static const flex_int16_t yy_base[92] =
     {   0,
-      117,  116,    0,    0,    0,   10,    0,  115,    0,    4,
-      124,  128,  120,    6,  112,   96,   95,   98,    0,   98,
-      128,   86,   63,    1,  128,   52,   60,  128,   63,   31,
-       20,   52,   51,    0,   55,   47,   52,   50,  128,   61,
-       52,   58,   50,   49,   37,   44,   37,   37,   34,   34,
-       33,   37,   35,   27,   36,   33,   31,   30,    0,    0,
-       32,   37,   23,   32,   31,   31,    0,   19,    7,    6,
-        0,    0,   24,   20,  128,    0,    1,  128,    1,    0,
-        0,  128,   74,   80,   83,   88,   93,   98,  103,  109,
+      116,  115,    0,    0,    0,   10,    0,  114,  101,    4,
+      122,  127,  114,    6,  101,   84,   86,   83,    0,   69,
+      127,   68,   61,    1,  127,   50,   58,  127,   61,   31,
+        1,   50,   49,    0,   53,   45,   50,   48,  127,   59,
+       52,   56,   46,   45,   35,   40,   33,   35,   32,   32,
+       31,   35,   33,   25,   34,   31,   29,   28,    0,    0,
+       30,   33,   19,   30,   27,   27,    0,   17,    5,    4,
+        0,    0,   21,   17,  127,    0,    0,  127,    1,    0,
+        0,  127,   74,   80,   83,   88,   93,   98,  103,  109,
       115
 
     } ;
@@ -445,46 +445,44 @@ static const flex_int16_t yy_def[92] =
 
     } ;
 
-static const flex_int16_t yy_nxt[152] =
+static const flex_int16_t yy_nxt[151] =
     {   0,
-       82,   12,   30,   82,   31,   12,   80,   82,   24,   15,
+       82,   82,   30,   30,   31,   31,   80,   82,   24,   15,
        16,   17,   18,   23,   19,   25,   35,   82,   82,   15,
-       36,   22,   30,   79,   31,   22,   78,   77,   75,   74,
-       73,   20,   39,   71,   70,   69,   40,   28,   68,   67,
-       66,   65,   64,   63,   62,   61,   60,   59,   58,   57,
-       56,   55,   42,   39,   54,   53,   52,   40,   28,   51,
-       50,   49,   39,   48,   47,   46,   45,   44,   43,   28,
-       38,   37,   25,   82,   12,   12,   12,   12,   12,   12,
-       21,   21,   21,   21,   21,   21,   29,   29,   34,   33,
+       36,   82,   79,   78,   77,   22,   75,   74,   73,   71,
+       70,   20,   39,   69,   68,   67,   40,   28,   66,   65,
+       64,   63,   62,   61,   60,   59,   58,   57,   56,   55,
+       54,   53,   42,   39,   52,   51,   50,   40,   28,   49,
+       39,   48,   47,   46,   45,   44,   43,   28,   38,   37,
+       25,   33,   32,   82,   12,   12,   12,   12,   12,   12,
+       21,   21,   21,   21,   21,   21,   29,   29,   34,   28,
        34,   34,   34,   34,   41,   41,   41,   41,   41,   40,
 
-       40,   32,   40,   72,   28,   72,   72,   72,   72,   76,
-       27,   76,   76,   76,   76,   81,   26,   81,   81,   81,
-       81,   25,   24,   82,   15,   14,   13,   11,   82,   82,
+       40,   27,   40,   72,   26,   72,   72,   72,   72,   76,
+       25,   76,   76,   76,   76,   81,   24,   81,   81,   81,
+       81,   82,   22,   15,   14,   13,   11,   82,   82,   82,
        82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
-       82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
-       82
+       82,   82,   82,   82,   82,   82,   82,   82,   82,   82
     } ;
 
-static const flex_int16_t yy_chk[152] =
+static const flex_int16_t yy_chk[151] =
     {   0,
-        0,    9,   19,    0,   19,   10,   79,    0,   14,    4,
+        0,    0,   19,   31,   19,   31,   79,    0,   14,    4,
         4,    4,    6,   10,    6,   14,   24,    0,    0,    6,
-       24,    9,   31,   77,   31,   10,   74,   73,   70,   69,
-       68,    6,   30,   66,   65,   64,   30,   30,   63,   62,
-       61,   58,   57,   56,   55,   54,   53,   52,   51,   50,
-       49,   48,   30,   41,   47,   46,   45,   41,   41,   44,
-       43,   42,   40,   38,   37,   36,   35,   33,   32,   29,
-       27,   26,   23,   41,   83,   83,   83,   83,   83,   83,
-       84,   84,   84,   84,   84,   84,   85,   85,   86,   22,
+       24,    0,   77,   74,   73,   10,   70,   69,   68,   66,
+       65,    6,   30,   64,   63,   62,   30,   30,   61,   58,
+       57,   56,   55,   54,   53,   52,   51,   50,   49,   48,
+       47,   46,   30,   41,   45,   44,   43,   41,   41,   42,
+       40,   38,   37,   36,   35,   33,   32,   29,   27,   26,
+       23,   22,   20,   41,   83,   83,   83,   83,   83,   83,
+       84,   84,   84,   84,   84,   84,   85,   85,   86,   18,
        86,   86,   86,   86,   87,   87,   87,   87,   87,   88,
 
-       88,   20,   88,   89,   18,   89,   89,   89,   89,   90,
-       17,   90,   90,   90,   90,   91,   16,   91,   91,   91,
-       91,   15,   13,   11,    8,    2,    1,   82,   82,   82,
+       88,   17,   88,   89,   16,   89,   89,   89,   89,   90,
+       15,   90,   90,   90,   90,   91,   13,   91,   91,   91,
+       91,   11,    9,    8,    2,    1,   82,   82,   82,   82,
        82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
-       82,   82,   82,   82,   82,   82,   82,   82,   82,   82,
-       82
+       82,   82,   82,   82,   82,   82,   82,   82,   82,   82
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -579,9 +577,10 @@ void updateDirectoryCoragem(char *d, char* name){
 }
 
 void writeToFile(const char* f){
-  FILE * file = fopen(currentFile, "a");
-  fwrite(f, sizeof(char), sizeof(f), file);
-  printf("%s", f);
+  FILE * file = fopen(currentFile, "a+");
+  printf("Printing to file: %s\n", f);
+  fputs(f, file);
+  fclose(file);
 }
 
 gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
@@ -594,9 +593,9 @@ gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
 
 }
 
-#line 598 "lex.yy.c"
+#line 597 "lex.yy.c"
 
-#line 600 "lex.yy.c"
+#line 599 "lex.yy.c"
 
 #define INITIAL 0
 #define META 1
@@ -820,10 +819,10 @@ YY_DECL
 		}
 
 	{
-#line 98 "main.l"
+#line 99 "main.l"
 
 
-#line 827 "lex.yy.c"
+#line 826 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -857,7 +856,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 128 );
+		while ( yy_base[yy_current_state] != 127 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -883,32 +882,32 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 100 "main.l"
+#line 101 "main.l"
 {BEGIN INITIAL; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 102 "main.l"
+#line 103 "main.l"
 {BEGIN META; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 104 "main.l"
+#line 105 "main.l"
 {email = strdup(yytext + 7); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 106 "main.l"
+#line 107 "main.l"
 {author = strdup(yytext + 8); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 108 "main.l"
+#line 109 "main.l"
 {BEGIN TREE; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 110 "main.l"
+#line 111 "main.l"
 {strcat(currentDirectory, nome);
                                                strcat(currentDirectory,"/");
                                                mkdir(currentDirectory);
@@ -916,14 +915,14 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 115 "main.l"
+#line 116 "main.l"
 {updateDirectory(yytext);
                                                mkdir(currentDirectory);
                                              }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 119 "main.l"
+#line 120 "main.l"
 {int trac = contaTracos(yytext);
                                                name = malloc(sizeof(char) * 30);
                                                strcpy(name, nome);
@@ -943,7 +942,7 @@ case 9:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 133 "main.l"
+#line 134 "main.l"
 {updateDirectory(yytext);
                                                 touch(yytext + currentTracos + 1);
                                                 mv(yytext + currentTracos + 1, currentDirectory);
@@ -955,7 +954,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 142 "main.l"
+#line 143 "main.l"
 {BEGIN WRITE;
                                                char* fileName = strdup(yytext + 2);
                                                currentFile = g_hash_table_lookup(files, fileName);
@@ -963,18 +962,19 @@ YY_RULE_SETUP
                                               }
 	YY_BREAK
 case 11:
+/* rule 11 can match eol */
 YY_RULE_SETUP
-#line 148 "main.l"
+#line 149 "main.l"
 {writeToFile(yytext);}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 150 "main.l"
+#line 151 "main.l"
 {writeToFile(nome);}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 159 "main.l"
+#line 160 "main.l"
 ECHO;
 	YY_BREAK
 #line 981 "lex.yy.c"
@@ -1989,7 +1989,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 159 "main.l"
+#line 160 "main.l"
 
 
 int main(int argc, char const *argv[]){
