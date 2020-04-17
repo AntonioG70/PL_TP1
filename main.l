@@ -76,7 +76,6 @@ void updateDirectoryCoragem(char *d, char* name){
 
 void writeToFile(const char* f){
   FILE * file = fopen(currentFile, "a+");
-  printf("Printing to file: %s\n", f);
   fputs(f, file);
   fclose(file);
 }
@@ -126,18 +125,14 @@ gboolean hashCompare(gconstpointer s1, gconstpointer s2) {
                                                touch(name);
                                                mv(name, currentDirectory);
                                                char* fileDirectory = strdup(currentDirectory);
-                                               printf("%s\n%s", yytext+currentTracos+1, fileDirectory);
                                                g_hash_table_insert(files, (gpointer) yytext + currentTracos + 1, (gpointer) fileDirectory);
-                                               printf("%d", g_hash_table_size(files));
                                               }
 
 <TREE>^-[-]*[ ][A-Za-z0-9\.]*$                {updateDirectory(yytext);
                                                 touch(yytext + currentTracos + 1);
                                                 mv(yytext + currentTracos + 1, currentDirectory);
-                                                char* fileDirectory = strdup(currentDirectory);
-                                                printf("%s\n%s", yytext+currentTracos+1, fileDirectory);
+                                                char* fileDirectory = strdup(currentDirectory);;
                                                 g_hash_table_insert(files, (gpointer) yytext + currentTracos + 1, (gpointer) fileDirectory);
-                                                printf("%d", g_hash_table_size(files));
                                               }
 
 \=[ ].*                                       {BEGIN WRITE;
